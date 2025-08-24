@@ -1,1 +1,1 @@
-# skillcred-project
+# skillcred-project-donation
