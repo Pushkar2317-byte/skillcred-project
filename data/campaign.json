@@ -1,0 +1,14 @@
+{
+"organizationName": "Bright Future Foundation",
+"campaignTitle": "Back-to-School Fundraiser",
+"campaignDescription": "We provide school kits, tutoring support, and meals for under-resourced students.",
+"currency": "inr",
+"suggestedAmounts": [500, 1000, 2500, 5000],
+"impactRules": [
+{ "minAmount": 1, "statement": "covers pencils and notebooks for one student" },
+{ "minAmount": 500, "statement": "funds a basic school kit for a student" },
+{ "minAmount": 1000, "statement": "supports a week of after-school tutoring" },
+{ "minAmount": 2500, "statement": "provides a month of nutritious lunches" },
+{ "minAmount": 5000, "statement": "equips three students with full term supplies" }
+]
+}

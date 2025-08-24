@@ -1,0 +1,28 @@
+[build]
+command = "npm run build"
+publish = "."
+functions = "netlify/functions"
+
+
+# Nice API path for functions
+[[redirects]]
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+
+
+# Allow CMS at /admin
+[[redirects]]
+from = "/admin"
+to = "/admin/"
+status = 301
+
+
+[functions]
+node_bundler = "esbuild"
+external_node_modules = ["stripe", "@sendgrid/mail", "@google/generative-ai"]
+
+
+# Optional: increase timeout for the webhook (Gemini + email)
+[functions."stripe-webhook"]
+timeout = 26

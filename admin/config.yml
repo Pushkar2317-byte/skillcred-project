@@ -1,0 +1,25 @@
+backend:
+name: git-gateway
+branch: main
+media_folder: "static/img"
+public_folder: "/img"
+
+
+collections:
+- name: "site"
+label: "Site Settings"
+files:
+- file: "data/campaign.json"
+label: "Campaign"
+fields:
+- { name: organizationName, label: Organization Name }
+- { name: campaignTitle, label: Campaign Title }
+- { name: campaignDescription, label: Campaign Description, widget: text }
+- { name: currency, label: Default Currency (ISO), default: inr }
+- { name: suggestedAmounts, label: Suggested Amounts, widget: list, field: {label: Amount, name: amount, widget: number} }
+- label: Impact Rules
+name: impactRules
+widget: list
+fields:
+- { label: Minimum Amount, name: minAmount, widget: number }
+- { label: Statement, name: statement, widget: string }
